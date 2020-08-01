@@ -1,0 +1,6 @@
+{
+  "volto-slate": {
+    "package": "volto-slate",
+    "local": "../../src"
+  }
+}

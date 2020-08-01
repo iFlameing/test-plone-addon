@@ -1,0 +1,43 @@
+@import 'globals.less';
+
+@addon: 'volto-slate';
+@addontype: 'editor';
+@addonelement: 'slate';
+
+.loadAddonVariables();
+
+& {
+  .slate-inline-toolbar {
+    position: absolute;
+
+    /* should be above admin panes (100), and below the Link modal form (1000) */
+    z-index: 500;
+
+    top: -10000px;
+    left: -10000px;
+    background-color: #fff;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    max-width: 100vw;
+    overflow: auto;
+  }
+
+  .ui.button:not(.icon) > .icon:not(.button):not(.dropdown) {
+    // TODO: is it possible to not use !important here and override button.less?
+    margin: auto auto auto auto !important;
+  }
+
+  .ui.button:last-child {
+    // TODO: is it possible to not use !important here and override button.less?
+    margin-right: 0 !important;
+  }
+
+  .block p {
+    margin-bottom: 0 !important;
+  }
+}
+
+.loadAddonOverrides();
